@@ -17,8 +17,10 @@ Projeto web desenvolvido com PHP seguindo o padrão MVC, com CRUDs locais para c
 - ✅ Menu inicial (Dashboard) com navegação centralizada  
 
 ---
+
 ## 📁 Estrutura do Projeto
 
+```text
 PetShopWEB/
 ├── index.php
 │
@@ -81,7 +83,6 @@ PetShopWEB/
         └── FeedbackLista.php
 ```
 
-
 ---
 
 ## 🛠️ Requisitos
@@ -96,145 +97,98 @@ PetShopWEB/
 ## 📦 Instalação
 
 ### 1. Configurar ambiente
-Copie o arquivo:
 
+Copie:
 
+```
 .env.example → .env
+```
 
+Configure:
 
-E configure as credenciais do banco:
-
-
+```env
 DB_DRIVER=pgsql
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=petshop
 DB_USER=postgres
 DB_PASS=sua_senha
-
+```
 
 ---
 
 ### 2. Criar banco de dados
-Execute o script:
 
+Execute:
 
+```
 sql/creates.sql
-
-
-no PostgreSQL.
+```
 
 ---
 
-### 3. Rodar o sistema localmente
+### 3. Rodar localmente
 
-Se estiver usando XAMPP:
-
-
+```
 http://localhost/PetShopMVC/
-
+```
 
 ---
 
-### 4. Publicação na VM (se aplicável)
+### 4. VM da disciplina
 
-Coloque o projeto na pasta:
-
-
+```
 /home/seu_usuario/public_html
+```
 
+Acesse:
 
-Acesse via:
-
-
+```
 http://177.44.248.29/seu_usuario/
-
+```
 
 ---
 
-## 🔐 Variáveis de Ambiente
+## 🔐 Segurança
 
-O projeto utiliza `.env` para segurança:
-
-- DB_DRIVER  
-- DB_HOST  
-- DB_PORT  
-- DB_NAME  
-- DB_USER  
-- DB_PASS  
-
-⚠️ O arquivo `.env` NÃO deve ser enviado ao GitHub.
+- Uso de `.env` para credenciais
+- Arquivo `.env` NÃO deve ir para GitHub
+- `.env.example` deve ser enviado
 
 ---
 
 ## 🌐 Funcionalidades
 
 ### 👤 Clientes
-- Cadastro
-- Listagem
-- Edição
-- Exclusão
-- Integração com ViaCEP
-
----
+- CRUD completo + ViaCEP
 
 ### 🐶 Pets
-- Cadastro
-- Listagem
-- Edição
-- Exclusão
-
----
+- CRUD completo
 
 ### 📦 Produtos
-- Cadastro
-- Listagem
-- Edição
-- Exclusão
+- CRUD completo
 
----
-
-### 💬 Feedbacks (MockAPI)
-- Cadastro via API externa
-- Listagem via API externa
-
----
-
-### 📍 API ViaCEP
-Utilizada para preenchimento automático de endereço:
-
-
-https://viacep.com.br/ws/{cep}/json/
-
-
----
-
-### ☁️ MockAPI
-Utilizada para armazenamento de feedbacks sem banco de dados local.
+### 💬 Feedbacks
+- Cadastro e listagem via MockAPI
 
 ---
 
 ## ⚠️ Observação
 
-- O projeto segue padrão MVC
-- O banco de dados é PostgreSQL
-- APIs externas são utilizadas para enriquecer funcionalidades
-- O sistema foi desenvolvido para fins acadêmicos
+Projeto desenvolvido para fins acadêmicos utilizando arquitetura MVC.
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para disciplina de Desenvolvimento Web MVC.
+Projeto desenvolvido para disciplina de Desenvolvimento Web.
 
 ---
 
-## 📌 Status do Projeto
+## 📌 Status
 
-✔ MVC estruturado corretamente  
-✔ CRUD Clientes completo  
-✔ CRUD Pets completo  
-✔ CRUD Produtos completo  
-✔ Feedback via MockAPI  
-✔ Integração com APIs externas  
+✔ MVC estruturado  
+✔ 3 CRUDs completos  
+✔ 1 CRUD parcial (API)  
+✔ Integração ViaCEP  
 ✔ Interface profissional  
