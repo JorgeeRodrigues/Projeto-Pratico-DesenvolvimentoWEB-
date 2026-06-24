@@ -18,68 +18,68 @@ Projeto web desenvolvido com PHP seguindo o padrão MVC, com CRUDs locais para c
 
 ---
 
-## 🏗️ Estrutura do Projeto
-
-
-PetShopWEB/
-├── index.php
-├── config/
-│   ├── Database.php
-│   └── .env.example
+📁 PetShopWEB/
 │
-├── assets/
-│   └── style.css
+├── 📄 index.php
 │
-├── controller/
-│   ├── ClienteController.php
-│   ├── PetController.php
-│   ├── ProdutoController.php
-│   ├── ServicoController.php
-│   └── FeedbackController.php
+├── 📁 config/
+│   ├── 📄 Database.php
+│   └── 📄 .env.example
 │
-├── dao/
-│   ├── ClienteDao.php
-│   ├── PetDao.php
-│   ├── ProdutoDao.php
-│   └── ServicoDao.php
+├── 📁 assets/
+│   └── 📄 style.css
 │
-├── model/
-│   ├── Cliente.php
-│   ├── Pet.php
-│   ├── Produto.php
-│   └── Servico.php
+├── 📁 controller/
+│   ├── 📄 ClienteController.php
+│   ├── 📄 PetController.php
+│   ├── 📄 ProdutoController.php
+│   ├── 📄 ServicoController.php
+│   └── 📄 FeedbackController.php
 │
-├── sql/
-│   └── creates.sql
+├── 📁 dao/
+│   ├── 📄 ClienteDao.php
+│   ├── 📄 PetDao.php
+│   ├── 📄 ProdutoDao.php
+│   └── 📄 ServicoDao.php
 │
-└── view/
-    ├── Clientes/
-    │   ├── CadastraCliente.php
-    │   ├── ListaCliente.php
-    │   ├── EditaCliente.php
-    │   └── DeletaCliente.php
+├── 📁 model/
+│   ├── 📄 Cliente.php
+│   ├── 📄 Pet.php
+│   ├── 📄 Produto.php
+│   └── 📄 Servico.php
+│
+├── 📁 sql/
+│   └── 📄 creates.sql
+│
+└── 📁 view/
     │
-    ├── Pets/
-    │   ├── CadastraPet.php
-    │   ├── ListaPet.php
-    │   ├── EditaPet.php
-    │   └── DeletaPet.php
+    ├── 📁 Clientes/
+    │   ├── 📄 CadastraCliente.php
+    │   ├── 📄 ListaCliente.php
+    │   ├── 📄 EditaCliente.php
+    │   └── 📄 DeletaCliente.php
     │
-    ├── Produtos/
-    │   ├── CadastraProduto.php
-    │   ├── ListaProduto.php
-    │   ├── EditaProduto.php
-    │   └── DeletaProduto.php
+    ├── 📁 Pets/
+    │   ├── 📄 CadastraPet.php
+    │   ├── 📄 ListaPet.php
+    │   ├── 📄 EditaPet.php
+    │   └── 📄 DeletaPet.php
     │
-    ├── Servicos/
-    │   ├── CadastraServico.php
-    │   ├── ListaServico.php
-    │   ├── EditaServico.php
-    │   └── DeletaServico.php
+    ├── 📁 Produtos/
+    │   ├── 📄 CadastraProduto.php
+    │   ├── 📄 ListaProduto.php
+    │   ├── 📄 EditaProduto.php
+    │   └── 📄 DeletaProduto.php
     │
-    └── Feedbacks/
-        ├── FeedbackCadastrar.php
-        └── FeedbackLista.php
+    ├── 📁 Servicos/
+    │   ├── 📄 CadastraServico.php
+    │   ├── 📄 ListaServico.php
+    │   ├── 📄 EditaServico.php
+    │   └── 📄 DeletaServico.php
+    │
+    └── 📁 Feedbacks/
+        ├── 📄 FeedbackCadastrar.php
+        └── 📄 FeedbackLista.php
 
 
 ---
