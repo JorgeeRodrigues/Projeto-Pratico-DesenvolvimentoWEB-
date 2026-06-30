@@ -42,23 +42,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <script>
-document.getElementById("cep").addEventListener("blur", function () {
+document.getElementById("cep").addEventListener("blur", async function () {
 
-    let cep = this.value.replace(/\D/g,'');
+    let cep = this.value.replace(/\D/g, '');
 
-    if (cep.length !== 8) return;
+    if (cep.length !== 8) {
+        alert("CEP inválido");
+        return;
+    }
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(r => r.json())
-        .then(data => {
+    try {
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
 
-            if (data.erro) return alert("CEP inválido");
+        if (!response.ok) {
+            throw new Error("Erro na requisição");
+        }
 
-            document.getElementById("rua").value = data.logradouro;
-            document.getElementById("bairro").value = data.bairro;
-            document.getElementById("cidade").value = data.localidade;
-            document.getElementById("estado").value = data.uf;
-        });
+        const data = await response.json();
+
+        if (data.erro) {
+            alert("CEP não encontrado");
+            return;
+        }
+
+        document.getElementById("rua").value = data.logradouro || "";
+        document.getElementById("bairro").value = data.bairro || "";
+        document.getElementById("cidade").value = data.localidade || "";
+        document.getElementById("estado").value = data.uf || "";
+
+    } catch (error) {
+        console.error(error);
+        alert("Erro ao buscar CEP. Verifique sua conexão ou VM.");
+    }
 });
 </script>
 

@@ -40,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <input name="nome" value="<?= $produto->getNome() ?>" required>
 <input name="preco" type="number" step="0.01" value="<?= $produto->getPreco() ?>" required>
 <input name="quantidade" type="number" value="<?= $produto->getQuantidade() ?>" required>
-<input name="categoria" value="<?= $produto->getCategoria() ?>" required>
 
 <button type="submit">Atualizar</button>
 

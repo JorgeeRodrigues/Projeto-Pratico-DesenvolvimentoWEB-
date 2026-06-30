@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <input type="hidden" name="id" value="<?= $servico->getId() ?>">
 
 <input name="nome" value="<?= $servico->getNome() ?>" required>
-<textarea name="descricao" required><?= $servico->getDescricao() ?></textarea>
 <input name="preco" type="number" step="0.01" value="<?= $servico->getPreco() ?>" required>
 <input name="duracao" type="number" value="<?= $servico->getDuracao() ?>" required>
 
