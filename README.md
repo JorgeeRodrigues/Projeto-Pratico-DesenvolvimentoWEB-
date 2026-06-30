@@ -18,12 +18,11 @@ Projeto web desenvolvido com PHP seguindo o padrão MVC, com CRUDs locais para c
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
-```text
+
 PetShopWEB/
 ├── index.php
-│
 ├── config/
 │   ├── Database.php
 │   └── .env.example
@@ -81,7 +80,7 @@ PetShopWEB/
     └── Feedbacks/
         ├── FeedbackCadastrar.php
         └── FeedbackLista.php
-```
+
 
 ---
 
@@ -97,98 +96,145 @@ PetShopWEB/
 ## 📦 Instalação
 
 ### 1. Configurar ambiente
+Copie o arquivo:
 
-Copie:
 
-```
 .env.example → .env
-```
 
-Configure:
 
-```env
+E configure as credenciais do banco:
+
+
 DB_DRIVER=pgsql
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=petshop
 DB_USER=postgres
 DB_PASS=sua_senha
-```
+
 
 ---
 
 ### 2. Criar banco de dados
+Execute o script:
 
-Execute:
 
-```
 sql/creates.sql
-```
+
+
+no PostgreSQL.
 
 ---
 
-### 3. Rodar localmente
+### 3. Rodar o sistema localmente
 
-```
+Se estiver usando XAMPP:
+
+
 http://localhost/PetShopMVC/
-```
+
 
 ---
 
-### 4. VM da disciplina
+### 4. Publicação na VM (se aplicável)
 
-```
+Coloque o projeto na pasta:
+
+
 /home/seu_usuario/public_html
-```
 
-Acesse:
 
-```
+Acesse via:
+
+
 http://177.44.248.29/seu_usuario/
-```
+
 
 ---
 
-## 🔐 Segurança
+## 🔐 Variáveis de Ambiente
 
-- Uso de `.env` para credenciais
-- Arquivo `.env` NÃO deve ir para GitHub
-- `.env.example` deve ser enviado
+O projeto utiliza `.env` para segurança:
+
+- DB_DRIVER  
+- DB_HOST  
+- DB_PORT  
+- DB_NAME  
+- DB_USER  
+- DB_PASS  
+
+⚠️ O arquivo `.env` NÃO deve ser enviado ao GitHub.
 
 ---
 
 ## 🌐 Funcionalidades
 
 ### 👤 Clientes
-- CRUD completo + ViaCEP
+- Cadastro
+- Listagem
+- Edição
+- Exclusão
+- Integração com ViaCEP
+
+---
 
 ### 🐶 Pets
-- CRUD completo
+- Cadastro
+- Listagem
+- Edição
+- Exclusão
+
+---
 
 ### 📦 Produtos
-- CRUD completo
+- Cadastro
+- Listagem
+- Edição
+- Exclusão
 
-### 💬 Feedbacks
-- Cadastro e listagem via MockAPI
+---
+
+### 💬 Feedbacks (MockAPI)
+- Cadastro via API externa
+- Listagem via API externa
+
+---
+
+### 📍 API ViaCEP
+Utilizada para preenchimento automático de endereço:
+
+
+https://viacep.com.br/ws/{cep}/json/
+
+
+---
+
+### ☁️ MockAPI
+Utilizada para armazenamento de feedbacks sem banco de dados local.
 
 ---
 
 ## ⚠️ Observação
 
-Projeto desenvolvido para fins acadêmicos utilizando arquitetura MVC.
+- O projeto segue padrão MVC
+- O banco de dados é PostgreSQL
+- APIs externas são utilizadas para enriquecer funcionalidades
+- O sistema foi desenvolvido para fins acadêmicos
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para disciplina de Desenvolvimento Web.
+Projeto desenvolvido para disciplina de Desenvolvimento Web MVC.
 
 ---
 
-## 📌 Status
+## 📌 Status do Projeto
 
-✔ MVC estruturado  
-✔ 3 CRUDs completos  
-✔ 1 CRUD parcial (API)  
-✔ Integração ViaCEP  
+✔ MVC estruturado corretamente  
+✔ CRUD Clientes completo  
+✔ CRUD Pets completo  
+✔ CRUD Produtos completo  
+✔ Feedback via MockAPI  
+✔ Integração com APIs externas  
 ✔ Interface profissional  
